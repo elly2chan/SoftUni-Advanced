@@ -1,6 +1,6 @@
 import os
 
-if os.path.exists('my_first_file.txt'):
+try:
     os.remove('my_first_file.txt')
-else:
+except FileNotFoundError:
     print('File already deleted!')
